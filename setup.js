@@ -1,0 +1,21 @@
+function setup(){
+    createCanvas(windowWidth,windowHeight)
+    graphic=createGraphics(width-200,height)
+    graphic2=createGraphics(200,height)
+    graphic3=createGraphics(200,height)
+    graphic.colorMode(HSB,1,1,1,1)
+    graphic2.colorMode(HSB,1,1,1,1)
+    graphic2.fill(0,0,0.6)
+    graphic2.noStroke()
+    graphic2.rect(0,0,200,height)
+    for(a=0;a<50;a++){
+        for(b=0;b<50;b++){
+            graphic2.fill(info.color[0],a/50,b/50)
+            graphic2.rect(b*4,a*4,4,4)
+        }
+    }
+    for(a=0;a<200;a++){
+        graphic2.fill(a/200,1,1)
+        graphic2.rect(a,200,1,50)
+    }
+}
